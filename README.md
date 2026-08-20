@@ -4,7 +4,6 @@
 [![LangGraph](https://img.shields.io/badge/LangGraph-Agentic_Workflows-FF6F00?style=for-the-badge&logo=chainlink&logoColor=white)](https://www.langchain.com/langgraph)
 [![Groq](https://img.shields.io/badge/Groq-Ultra_Fast_Inference-F05032?style=for-the-badge&logo=lightning&logoColor=white)](https://groq.com/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.141%2B-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 **BlogAgentic AI** is an advanced, production-grade agentic AI blog generation and multi-lingual translation engine built with **LangGraph**, **LangChain**, **Groq Llama / GPT-OSS models**, and **FastAPI**. 
 
