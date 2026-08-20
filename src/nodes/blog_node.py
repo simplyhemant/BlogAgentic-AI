@@ -68,20 +68,9 @@ class BlogNode:
 
         ]
 
-        try:
-            translation_content = self.llm.with_structured_output(Blog, method="json_mode").invoke(messages)
-            return {"blog": {"title": translation_content.title, "content": translation_content.content}}
-        except Exception:
-            response = self.llm.invoke(messages)
-            import json, re
-            match = re.search(r'\{.*\}', response.content, re.DOTALL)
-            if match:
-                try:
-                    data = json.loads(match.group(0))
-                    return {"blog": {"title": data.get("title", blog_title), "content": data.get("content", response.content)}}
-                except Exception:
-                    pass
-            return {"blog": {"title": blog_title, "content": response.content}}
+        translation_content = self.llm.with_structured_output(Blog, method="json_mode").invoke(messages)
+
+        return {"blog": {"title": translation_content.title, "content": translation_content.content}}
 
     def route(self, state: BlogState):
         return {"current_language": state['current_language']}
